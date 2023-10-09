@@ -1,0 +1,13 @@
+{
+    "vercel": 2,
+    "name": "Cv-Aditya-Al-Assad",
+    "build": [{
+        "src": "app.js",
+        "use": "@vercel/node"
+    }],
+    "routes": [{
+        "src": "/(.+)",
+        "dest": "/app.js"
+
+    }]
+}
