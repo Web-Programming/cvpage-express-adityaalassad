@@ -31,6 +31,12 @@ app.use(function (req, res, next) {
   next(createError(404));
 });
 
+// vercel framework
+app.use(framework({
+  framework: 'express',
+  version: '4.16.1',
+}));
+
 // error handler
 app.use(function (err, req, res, next) {
   // set locals, only providing error in development
