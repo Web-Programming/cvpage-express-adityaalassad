@@ -1,6 +1,14 @@
 {
-    "rewrites": [{
-        "source": "/(.*)",
-        "destination": "/(.*)"
-    }]
+    "version": 2,
+    "name": "kuis-1",
+    "runtime": "node@18",
+    "builds": [{
+            "src": "app.js",
+            "use": "@vercel/node"
+        },
+        {
+            "src": "views/index.jade",
+            "use": "pug"
+        }
+    ]
 }
