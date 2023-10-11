@@ -21,7 +21,6 @@ app.use(express.urlencoded({
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/bootstrap', express.static(__dirname + '/node_modules/bootstrap/dist/css'));
-app.use('/public', express.static(__dirname + '/images/'));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
@@ -30,7 +29,6 @@ app.use('/users', usersRouter);
 app.use(function (req, res, next) {
   next(createError(404));
 });
-
 
 // error handler
 app.use(function (err, req, res, next) {
