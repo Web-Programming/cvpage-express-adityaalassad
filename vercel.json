@@ -7,7 +7,7 @@
         },
         {
             "src": "views/index.jade",
-            "use": "pug"
+            "use": "pug-plain"
         }
     ]
 }
